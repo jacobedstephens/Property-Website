@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luxury Real Estate</title>
+  <link rel="stylesheet" href="property.css">
+</head>
+
+<body>
+    <main>
+        <section class="main-image slideshow-container">
+            <img src="photos2/IMG_5728-Enhanced-NR.jpg" alt="Image 1" class="active">
+            <img src="photos2/IMG_5758-Enhanced-NR.jpg" alt="Image 2">
+            <img src="photos2/IMG_5848-Enhanced-NR.jpg" alt="Image 3">
+            <img src="photos2/IMG_6071.jpg" alt="Image 4">
+            <img src="photos2/IMG_6091.jpg" alt="Image 5">
+            <img src="photos2/IMG_6151.jpg" alt="Image 6">
+            <img src="photos2/IMG_6166.jpg" alt="Image 6">
+
+             <div class="property-address">2601 Armatrading Dr, Cedar Park</div>
+        </section>
+        </main>
+
+        <script>
+            const slides = document.querySelectorAll(".slideshow-container img");
+            let currentSlideIndex = 0;
+        
+            // Function to preload images
+            function preloadImages() {
+              slides.forEach(slide => {
+                const img = new Image();
+                img.src = slide.src;
+              });
+            }
+        
+            function showSlide(slideIndex) {
+              slides.forEach((slide, index) => {
+                if (index === slideIndex) {
+                  slide.classList.add("active");
+                } else {
+                  slide.classList.remove("active");
+                }
+              });
+            }
+        
+            function showNextSlide() {
+              currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+              showSlide(currentSlideIndex);
+            }
+        
+            // Preload the images and then start the slideshow
+            preloadImages();
+            setInterval(showNextSlide, 4000); // Auto advance every 4 seconds
+          </script>
+
+        <section class="property-details">
+            <div class="detail">
+              <span class="price">Price Available Upon</span>
+              <span>Request</span>
+              
+            </div>
+            <div class="detail">
+              <span class="detail-value">3,724</span>
+              <span>Sqft</span>
+            </div>
+            <div class="detail">
+              <span class="detail-value">5</span>
+              <span>Beds</span>
+            </div>
+            <div class="detail">
+              <span class="detail-value">4</span>
+              <span>Baths</span>
+            </div>
+          </section>
+    
+        <section class="property-description">
+          <p>
+            This beautifully updated home exudes grace and refinement showcasing an open floor plan to include 5 bedrooms, 4 baths, a large game room and a separate study. Walls of windows in the living room allow for ample natural light.
+          </p>
+          <p>
+            The living room features a gorgeous slate stone fireplace, custom built-ins, and access to a sizable covered porch with a built in outdoor grill. The large kitchen features granite countertops, a gas cooktop, and double ovens. The guest room and full bath are located on the main level.
+          </p>
+          <p>
+            The upper level features a large game room, master bedroom/bath, three additional bedrooms, and two full baths. The primary bedroom is large enough for a separate seating area. The ensuite bath has dual sinks, a Jacuzzi tub, a separate shower, and a generous walk-in closet.
+          </p>
+        </section>
+
+        <div class="moreinfo">
+            <section class="two-column-list">
+                <h2>Property Features</h2>
+                <div class="two-column-list-item">
+                <span>Property Type:</span> Residential
+                </div>
+                <div class="two-column-list-item">
+                <span>Beds:</span> 5
+                </div>
+                <div class="two-column-list-item">
+                <span>Baths:</span> 4
+                </div>
+                <div class="two-column-list-item">
+                <span>Square Feet:</span> 3,724
+                </div>
+                <div class="two-column-list-item">
+                <span>Garage:</span> 3
+                </div>
+                <div class="two-column-list-item">
+                <span>Year Built:</span> 2011
+                </div>
+                <div class="two-column-list-item">
+                <span>Area of Town:</span> Cedar Park
+                </div>
+            </section>
+
+            <div class="mapcontainer">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3438.409749071337!2d-97.85778162460296!3d30.481152374706625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x865b2df3f812fce9%3A0xa33df0db7536fb1c!2s2601%20Armatrading%20Dr%2C%20Cedar%20Park%2C%20TX%2078613!5e0!3m2!1sen!2sus!4v1691090181611!5m2!1sen!2sus"  class="map" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+  
+
+<div class="gallery-text">
+    <h>Photo Gallery</h>
+</div>
+
+<div class="full-img" id="fullImgBox">
+    <img src="media/ground/Alta Vista-10.jpg" id="fullImg">
+    <span onclick="closeFullImg()">X</span>
+</div>
+
+<div class="gallery">
+    <img class="media" src="photos2/IMG_5705.jpg" onclick="openFullImg(this.src)">
+    <img class="media" src="photos2/IMG_5720-Enhanced-NR.jpg" onclick="openFullImg(this.src)">
+    <img class="media" src="photos2/IMG_5728-Enhanced-NR.jpg" onclick="openFullImg(this.src)">
+    <img class="media" src="photos2/IMG_5733.jpg" onclick="openFullImg(this.src)">
+    <img class="media" src="photos2/IMG_5738.jpg" onclick="openFullImg(this.src)">
+    <img class="media" src="photos2/IMG_5748-Enhanced-NR.jpg" onclick="openFullImg(this.src)">
+    <img class="media" src="photos2/IMG_5758-Enhanced-NR.jpg" onclick="openFullImg(this.src)">
+    <img class="media" src="photos2/IMG_5763-Enhanced-NR.jpg" onclick="openFullImg(this.src)">
+    <img class="media" src="photos2/IMG_5773-Enhanced-NR.jpg" onclick="openFullImg(this.src)">
+    <img class="media" src="photos2/IMG_5778-Enhanced-NR.jpg" onclick="openFullImg(this.src)">
+    <img class="media" src="photos2/IMG_5783-Enhanced-NR.jpg" onclick="openFullImg(this.src)">
+    <img class="media" src="photos2/IMG_5798-Enhanced-NR.jpg" onclick="openFullImg(this.src)">
+    <img class="media" src="photos2/IMG_5803-Enhanced-NR.jpg" onclick="openFullImg(this.src)">
+    <img class="media" src="photos2/IMG_5813-Enhanced-NR.jpg" onclick="openFullImg(this.src)">
+    <img class="media" src="photos2/IMG_5818-Enhanced-NR.jpg" onclick="openFullImg(this.src)">
+    <img class="media" src="photos2/IMG_5823-Enhanced-NR.jpg" onclick="openFullImg(this.src)">
+    <img class="media" src="photos2/IMG_5828-Enhanced-NR.jpg" onclick="openFullImg(this.src)">
+    <img class="media" src="photos2/IMG_5838-Enhanced-NR.jpg" onclick="openFullImg(this.src)">
+    <img class="media" src="photos2/IMG_5843-Enhanced-NR.jpg" onclick="openFullImg(this.src)">
+    <img class="media" src="photos2/IMG_5848-Enhanced-NR.jpg" onclick="openFullImg(this.src)">
+    <img class="media" src="photos2/IMG_5858-Enhanced-NR.jpg" onclick="openFullImg(this.src)">
+    <img class="media" src="photos2/IMG_5873.jpg" onclick="openFullImg(this.src)">
+    <img class="media" src="photos2/IMG_5883-Enhanced-NR.jpg" onclick="openFullImg(this.src)">
+    <img class="media" src="photos2/IMG_5888.jpg" onclick="openFullImg(this.src)">
+    <img class="media" src="photos2/IMG_5898.jpg" onclick="openFullImg(this.src)">
+    <img class="media" src="photos2/IMG_5908-Enhanced-NR.jpg" onclick="openFullImg(this.src)">
+    <img class="media" src="photos2/IMG_5913.jpg" onclick="openFullImg(this.src)">
+    <img class="media" src="photos2/IMG_5919-Enhanced-NR.jpg" onclick="openFullImg(this.src)">
+    <img class="media" src="photos2/IMG_5936-Enhanced-NR.jpg" onclick="openFullImg(this.src)">
+    <img class="media" src="photos2/IMG_5941.jpg" onclick="openFullImg(this.src)">
+    <img class="media" src="photos2/IMG_5946.jpg" onclick="openFullImg(this.src)">
+    <img class="media" src="photos2/IMG_5956-Enhanced-NR.jpg" onclick="openFullImg(this.src)">
+    <img class="media" src="photos2/IMG_5961.jpg" onclick="openFullImg(this.src)">
+    <img class="media" src="photos2/IMG_5966.jpg" onclick="openFullImg(this.src)">
+    <img class="media" src="photos2/IMG_5981.jpg" onclick="openFullImg(this.src)">
+    <img class="media" src="photos2/IMG_5986.jpg" onclick="openFullImg(this.src)">
+    <img class="media" src="photos2/IMG_5991-Enhanced-NR.jpg" onclick="openFullImg(this.src)">
+    <img class="media" src="photos2/IMG_6006-Enhanced-NR.jpg" onclick="openFullImg(this.src)">
+    <img class="media" src="photos2/IMG_6016.jpg" onclick="openFullImg(this.src)">
+    <img class="media" src="photos2/IMG_6021-Enhanced-NR.jpg" onclick="openFullImg(this.src)">
+    <img class="media" src="photos2/IMG_6031.jpg" onclick="openFullImg(this.src)">
+    <img class="media" src="photos2/IMG_6036.jpg" onclick="openFullImg(this.src)">
+    <img class="media" src="photos2/IMG_6041.jpg" onclick="openFullImg(this.src)">
+    <img class="media" src="photos2/IMG_6046.jpg" onclick="openFullImg(this.src)">
+    <img class="media" src="photos2/IMG_6056.jpg" onclick="openFullImg(this.src)">
+    <img class="media" src="photos2/IMG_6071.jpg" onclick="openFullImg(this.src)">
+    <img class="media" src="photos2/IMG_6076.jpg" onclick="openFullImg(this.src)">
+    <img class="media" src="photos2/IMG_6081.jpg" onclick="openFullImg(this.src)">
+    <img class="media" src="photos2/IMG_6091.jpg" onclick="openFullImg(this.src)">
+    <img class="media" src="photos2/IMG_6096.jpg" onclick="openFullImg(this.src)">
+    <img class="media" src="photos2/IMG_6101.jpg" onclick="openFullImg(this.src)">
+    <img class="media" src="photos2/IMG_6111.jpg" onclick="openFullImg(this.src)">
+    <img class="media" src="photos2/IMG_6116.jpg" onclick="openFullImg(this.src)">
+    <img class="media" src="photos2/IMG_6126.jpg" onclick="openFullImg(this.src)">
+    <img class="media" src="photos2/IMG_6131.jpg" onclick="openFullImg(this.src)">
+    <img class="media" src="photos2/IMG_6146.jpg" onclick="openFullImg(this.src)">
+    <img class="media" src="photos2/IMG_6151.jpg" onclick="openFullImg(this.src)">
+    <img class="media" src="photos2/IMG_6156.jpg" onclick="openFullImg(this.src)">
+    <img class="media" src="photos2/IMG_6166.jpg" onclick="openFullImg(this.src)">
+    <img class="media" src="photos2/DJI_0328.jpg" onclick="openFullImg(this.src)">
+    <img class="media" src="photos2/DJI_0329.jpg" onclick="openFullImg(this.src)">
+    <img class="media" src="photos2/DJI_0330.jpg" onclick="openFullImg(this.src)">
+    <img class="media" src="photos2/DJI_0331.jpg" onclick="openFullImg(this.src)">
+    <img class="media" src="photos2/DJI_0332.jpg" onclick="openFullImg(this.src)">
+   
+</div>
+
+<script>
+
+    var FullImgBox = document.getElementById("fullImgBox");
+    var FullImg = document.getElementById("fullImg");
+
+    function openFullImg(pic){
+        fullImgBox.style.display = "flex"; //makes the lightbox show up!
+        fullImg.src = pic;
+    }
+    
+    function closeFullImg(){
+        fullImgBox.style.display = "none"; //makes the lightbox dissapear!
+    }
+</script>
+
+</body>
+
+</html>
