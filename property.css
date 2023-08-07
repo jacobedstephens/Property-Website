@@ -8,7 +8,7 @@ body {
   main {
     
     margin: 0 auto;
-    padding: 3rem;
+    padding: 3vw;
   }
   
   .main-image img {
@@ -30,7 +30,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 1rem 0;
+    padding: .3rem 0;
     border-top: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
     font-size: 25px;
@@ -218,5 +218,36 @@ body {
     .property-details {
         font-size: 1.7vw;
       }
+      .two-column-list {
+        width: 100%;
+        padding-bottom: 50px;
+        padding: 0;
+      }
+      .mapcontainer {
+        width: 100%;
+      }
+      .moreinfo {
+        display: block;
+        padding: 5rem;
+        height: auto;
+      }
+      .mapcontainer {
+        padding-right: 0;
+        padding-left: 0;
+        padding-top: 80px;
+        height: 400px;
+      }
+  }
+  @media (max-width: 800px) {
+        .property-details {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 0.3rem 0px;
+            border-top: 1px solid rgb(204, 204, 204);
+            border-bottom: 1px solid rgb(204, 204, 204);
+            font-size: 25px;
+            font-weight: 300;
+        }
   }
     
