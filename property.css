@@ -148,19 +148,20 @@ body {
     align-items: center;
     justify-content: center;
     z-index: 100;
- }
- .full-img img {
-    height: 90%;
+}
+.full-img img {
+    max-width: 90vw;
+    max-height: 80vh;
     border: 2px solid white;
- }
- .full-img span {
+}
+.full-img span {
     position: absolute;
     top: 5%;
     right: 5%;
     font-size: 25px;
     color: #d8d8d8;
     cursor: pointer;
- }
+}
  .slideshow-container {
     position: relative;
     width: 100%;
