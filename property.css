@@ -33,25 +33,33 @@ body {
     padding: .3rem 0;
     border-top: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
-    font-size: 25px;
-    font-weight: 300;
   }
 
   .property-details .detail {
     width: 25%;
     text-align: center;
     margin: 1rem 0;
+    font-size: 25px;
+    font-weight: 300;
   }
 
   .property-details .detail-value {
     font-weight: 700;
     font-size: 38px;
   }
+  .property-details .detail1 {
+    width: 25%;
+    text-align: center;
+    margin: 1rem 0;
+    font-size: 25px;
+    font-weight: 300;
+  }
 
   .property-details .price {
     margin-right: 2rem;
     margin-left: 2rem;
     text-align: center;
+    display: block;
   }
   
   .property-description {
@@ -107,25 +115,24 @@ body {
     height: 90px;
 }
 .gallery {
-    line-height:1;
-    -webkit-column-count:3; /* split it into 5 columns */
-    -webkit-column-gap:5px; /* give it a 5px gap between columns */
-    -moz-column-count:3;
-    -moz-column-gap:5px;
-    column-count:5;
-    column-gap:10px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 columns */
+    grid-gap: 10px; /* Gap between images */
     padding: 3rem;
- }
-  .gallery img {
-    width: 100% !important;
-    height: auto !important;
-    margin-bottom:5px; /* to match column gap */
+}
+
+.media {
+    width: 100%; /* Make each image take full width of its grid cell */
+    height: auto;
     cursor: pointer;
- }
- .media {
-    transition: 0.5s;
-    padding-bottom: 5px;
- }
+}
+
+/* Optional: To make the gallery responsive */
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns on smaller screens */
+    }
+}
  .media:hover {
     filter: brightness(60%);
     transform: scale(1.03);
@@ -215,8 +222,8 @@ body {
     height: 60vh;
   }
   @media (max-width: 1260px) {
-    .property-details {
-        font-size: 1.7vw;
+      .property-details .detail1{
+        font-size: 20px;
       }
       .two-column-list {
         width: 100%;
@@ -228,7 +235,7 @@ body {
       }
       .moreinfo {
         display: block;
-        padding: 5rem;
+        padding: 5vw;
         height: auto;
       }
       .mapcontainer {
@@ -237,6 +244,19 @@ body {
         padding-top: 80px;
         height: 400px;
       }
+      .property-description {
+        margin: 0;
+        padding-left: 5vw;
+        padding-right: 5vw;
+        padding-top: 3vw;
+        width: auto;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 1.5;
+    }
+    .gallery {
+        padding: 5vw;
+    }
   }
   @media (max-width: 800px) {
         .property-details {
@@ -246,8 +266,41 @@ body {
             padding: 0.3rem 0px;
             border-top: 1px solid rgb(204, 204, 204);
             border-bottom: 1px solid rgb(204, 204, 204);
-            font-size: 25px;
+            font-size: 2vw;
             font-weight: 300;
         }
+        .property-details .detail {
+            display: block;
+            align-items: center;
+            
+        }
+        .property-address {
+            position: absolute;
+            text-align: center;
+            bottom: 0;
+            left: 0;
+            padding: 4vw;
+            font-size: 24px;
+            font-weight: bold;
+            color: #fff;
+        }
+        
   }
+  @media (max-width: 500px)  {
+    .property-details {
+        flex-direction: column; /* Change flex direction to stack elements vertically */
+        align-items: center; /* Center align elements horizontally */
+    }
+    
+    .property-details .detail,
+    .property-details .detail1,
+    .property-details .price {
+        width: 100%; /* Make elements take full width of container */
+        margin: 0.5rem 0; /* Adjust margin for spacing */
+    }
+    .property-details .detail1 {
+        width: 70%;
+    }
+  }
+  
     
